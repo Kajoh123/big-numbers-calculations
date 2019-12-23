@@ -65,8 +65,9 @@ std::string add(std::string first, std::string second)
     return returnNumber;
 }
 
-std::string multiplication(std::string number, std::string multiplier)
+std::string multiplication(std::string number, std::string multiplier) //multiply two numbers (only unsigned!)
 {
+    giveGreater(multiplier, number); //to optimize code (a little)
     std::string returningNumber = "0"; //this is returning value
     std::string tmp = "0";
 
@@ -80,7 +81,8 @@ std::string multiplication(std::string number, std::string multiplier)
 
 std::string squareRoot(std::string num1)
 {
-    std::string returningNumber = "1";
+    if(num1[0] == '-'){num1.erase(0, 1);} //We have to delete minus if num1 is lower than zero
+    std::string returningNumber = "1"; //This is returning value
     std::string tmp = "1";
     std::string helper = "1"; //it's sequence of odd numbers (length of this sequence equals num1 and sum of this sequence equals square root of num1)
     while(tmp != num1)

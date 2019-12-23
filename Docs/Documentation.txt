@@ -1,0 +1,11 @@
+Documentation
+	“bigNumsLib.h”
+		std::string add (std::string firstNum, std::string secondNum);
+			This function adds two numbers. Both parameters have to be std::string. 
+			Example: add(“3”, “564”); returns “567”.
+		std::string multiplication (std::string number, int multiplier);
+			This function multiply two numbers.
+			Example: multiplication(“8”, 3); returns “24”.
+		std::string squareRoot (std::string number);
+			This function returns square root of number.
+			Example: squareRoot(“25”); returns “625”.

@@ -65,14 +65,17 @@ std::string add(std::string first, std::string second)
     return returnNumber;
 }
 
-std::string multiplication(std::string number, int multiplier)
+std::string multiplication(std::string number, std::string multiplier)
 {
-    std::string score = "0"; //this is returning value
-    for(; multiplier > 0; multiplier--)
+    std::string returningNumber = "0"; //this is returning value
+    std::string tmp = "0";
+
+    while(tmp != multiplier)
     {
-        score = add(score, number); //to multiply number we use adding
+        returningNumber = add(returningNumber, number);
+        tmp = add(tmp, "1");
     }
-    return score;
+    return returningNumber;
 }
 
 std::string squareRoot(std::string num1)
